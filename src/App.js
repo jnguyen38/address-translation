@@ -102,11 +102,12 @@ function Paging() {
                         <li>Number of Pages for PT: <b>2^{pagesPT}</b></li>
                         <li>Number of PTEs per Page: <b>2^{PTEperPage}</b></li><br/>
                         <li>Number of PDEs: <b>2^{PDE}</b></li>
-                        <li>Number of PDI Bits in VPN: <b>{PDI}</b></li>
-                        <li>Number of PTI Bits in VPN: <b>{PTI}</b></li>
+                        <li>Number of Bits in Index PD: <b>{PDI}</b></li>
+                        <li>Number of Bits in Index PT: <b>{PTI}</b></li>
                         <li>Number of Bytes for PD: <b>2^{bytesPD}</b></li>
                         <li>Number of Pages for PD: <b>{Math.pow(2, pagesPD)}</b></li>
                     </ol>
+                    <p>PDE = "Page Directory Entry" PD = "Page Directory" PTE = "Page Table Entry" PT = "Page Table"</p><br/>
                 </div>
             }
             <input type="submit" value={"Submit"}/>
