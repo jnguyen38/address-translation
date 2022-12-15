@@ -34,14 +34,14 @@ function Paging() {
 
         pageSize = Math.log2(parseInt(pageSize)) + pageBits;
         let _addressable = virtual;
-        let _numPages = addressable - pageSize;
+        let _numPages = _addressable - pageSize;
         let _VPN = _numPages;
         let _offset = virtual - _VPN;
         let _PTE = _numPages;
         let _bytesPT = _PTE + pte;
         let _pagesPT = _bytesPT - pageSize;
         let _PTEperPage = pageSize - pte;
-        let _PDE = PTE - PTEperPage;
+        let _PDE = _PTE - _PTEperPage;
         let _PDI = _PDE;
         let _PTI = _VPN - _PDI;
         let _bytesPD = _PDE + pde;
@@ -61,8 +61,7 @@ function Paging() {
         setBytesPD(_bytesPD);
         setPagesPD(_pagesPD);
 
-
-        setOutput(true);
+        setTimeout(() => setOutput(true), 100);
     }
 
     return (
