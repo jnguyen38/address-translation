@@ -30,6 +30,9 @@ function Paging() {
         if (pageSize.includes("kb")) {
             pageSize = pageSize.split("kb")[0];
             pageBits = 10;
+        } else if (pageSize.includes("mb")) {
+            pageSize = pageSize.split("mb")[0];
+            pageBits = 20;
         }
 
         pageSize = Math.log2(parseInt(pageSize)) + pageBits;
@@ -78,6 +81,7 @@ function Paging() {
                     <label htmlFor={"pageSize"}>Page Size</label>
                     <input type={"text"} name={"pageSize"} placeholder={"Bytes"} required/>
                 </li>
+                <p>Can specify KB/MB if needed (ie "4KB" or "4MB")</p>
                 <li className={"d-flex jc-sb w-40"}>
                     <label htmlFor={"pte"}>PTE Bytes</label>
                     <input type={"number"} name={"pte"} placeholder={"Bytes"} required/>

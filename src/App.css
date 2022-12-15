@@ -54,3 +54,8 @@ li {
 .w-40 {
   width: 40%;
 }
+
+ul p {
+  font-size: .8em;
+  margin-left: 20px;
+}
