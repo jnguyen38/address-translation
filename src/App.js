@@ -109,7 +109,7 @@ function Paging() {
                         <li>Number of Bits in Index PD: <b>{PDI}</b></li>
                         <li>Number of Bits in Index PT: <b>{PTI}</b></li>
                         <li>Number of Bytes for PD: <b>2^{bytesPD}</b></li>
-                        <li>Number of Pages for PD: <b>{Math.pow(2, pagesPD)}</b></li>
+                        <li>Number of Pages for PD: <b>{Math.ceil(Math.pow(2, pagesPD))}</b></li>
                     </ol>
                     <p>PDE = "Page Directory Entry" PD = "Page Directory" PTE = "Page Table Entry" PT = "Page Table"</p><br/>
                 </div>
